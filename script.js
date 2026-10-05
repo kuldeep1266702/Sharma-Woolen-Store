@@ -1,7 +1,7 @@
 // ---------------- SHOP CONFIG ----------------
 // Replace this number with the seller's WhatsApp number in international format.
 // Example for India: 919876543210 (no +, spaces or dashes).
-const SELLER_WHATSAPP = "91XXXXXXXXXX";
+const SELLER_WHATSAPP = "918650271942";
 
 const products = [
   {id:1,name:"Pink Baby Star Kit",cat:"baby",price:999,tag:"BESTSELLER",desc:"Soft hand-stitched newborn set.",image:"assets/baby-kit.jpg"},
