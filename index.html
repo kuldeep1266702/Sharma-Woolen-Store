@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#8f3151">
+  <title>Wool & Warmth — Hand-Stitched Baby & Winterwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">🧶 Hand-stitched with love • Cash on Delivery available • WhatsApp ordering</div>
+
+  <header class="nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">🧶</span>
+      <span><b>Wool & Warmth</b><small>hand-stitched with love</small></span>
+    </a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#about">Our Story</a>
+      <a href="#how">How to Order</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">🛒 <span>Cart</span><i id="cartCount">0</i></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">✨ Made by hand • Made for little ones</span>
+        <h1>Warm little moments,<br><em>stitched with love.</em></h1>
+        <p>Beautiful hand-stitched woollen baby kits, caps, socks, gloves and sweaters — made for cosy days and thoughtful gifting.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#shop">Shop collection <span>→</span></a>
+          <button class="secondary" onclick="scrollToHow()">Order on WhatsApp</button>
+        </div>
+        <div class="trust-row">
+          <span>✓ Handmade</span><span>✓ COD available</span><span>✓ Gift-ready</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="blob"></div>
+        <img src="assets/baby-kit.jpg" alt="Pink hand-stitched baby woollen kit">
+        <div class="floating-card"><b>Handmade</b><span>Every stitch has a story ♥</span></div>
+      </div>
+    </section>
+
+    <section class="category-strip">
+      <button class="cat active" data-filter="all">All</button>
+      <button class="cat" data-filter="baby">👶 Baby Kits</button>
+      <button class="cat" data-filter="cap">🧢 Caps</button>
+      <button class="cat" data-filter="socks">🧦 Socks</button>
+      <button class="cat" data-filter="gloves">🧤 Gloves</button>
+      <button class="cat" data-filter="sweater">🧶 Sweaters</button>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="section-head">
+        <div><span class="eyebrow">OUR COLLECTION</span><h2>Little things, lovingly made.</h2></div>
+        <p id="resultText">Showing all products</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="story section" id="about">
+      <div class="story-image"><img src="assets/baby-kit.jpg" alt="Hand-stitched pink baby kit"></div>
+      <div class="story-copy">
+        <span class="eyebrow">WHY WOOL & WARMTH</span>
+        <h2>Not factory-made.<br>Made with feeling.</h2>
+        <p>Our pieces are inspired by the warmth of handmade gifts — soft yarn, careful stitches and designs made for everyday winter cuddles.</p>
+        <div class="feature-grid">
+          <div><strong>01</strong><b>Hand stitched</b><span>Carefully crafted, piece by piece.</span></div>
+          <div><strong>02</strong><b>Made to gift</b><span>Sweet designs for newborns & kids.</span></div>
+          <div><strong>03</strong><b>Easy ordering</b><span>Choose, checkout & send on WhatsApp.</span></div>
+          <div><strong>04</strong><b>COD friendly</b><span>Pay when your parcel arrives.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how section" id="how">
+      <div class="section-head center"><span class="eyebrow">SIMPLE CHECKOUT</span><h2>Order in 3 easy steps.</h2></div>
+      <div class="steps">
+        <div><span>1</span><h3>Pick your favourites</h3><p>Add products and choose quantities.</p></div>
+        <div><span>2</span><h3>Enter delivery details</h3><p>Name, phone and complete address.</p></div>
+        <div><span>3</span><h3>Confirm on WhatsApp</h3><p>Your order summary opens in WhatsApp for the seller.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>Wool & Warmth 🧶</b><p>Hand-stitched warmth for little hearts.</p></div>
+    <div><span>COD • WhatsApp Orders • Handmade</span><small>© 2026 Wool & Warmth</small></div>
+  </footer>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR BAG</span><h3>Shopping Cart</h3></div><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-empty" id="cartEmpty"><div>🧺</div><b>Your cart is waiting</b><span>Add a handmade piece to begin.</span></div>
+    <div class="cart-footer">
+      <div class="total"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+      <button class="primary full" id="checkoutBtn">Checkout with COD →</button>
+      <small>Shipping can be confirmed by the seller on WhatsApp.</small>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <div class="checkout-modal">
+      <button class="modal-close" id="closeCheckout">×</button>
+      <span class="eyebrow">CASH ON DELIVERY</span>
+      <h2>Where should we send it?</h2>
+      <p class="muted">Enter your delivery details. We'll create your order and open WhatsApp with the complete order message.</p>
+      <form id="checkoutForm">
+        <div class="two"><label>Full name<input required name="name" placeholder="Your name"></label><label>Mobile number<input required name="phone" inputmode="tel" placeholder="10-digit mobile"></label></div>
+        <label>Complete address<textarea required name="address" rows="3" placeholder="House / flat, street, area"></textarea></label>
+        <div class="two"><label>City<input required name="city" placeholder="City"></label><label>PIN code<input required name="pin" inputmode="numeric" placeholder="6-digit PIN"></label></div>
+        <label>Order note (optional)<input name="note" placeholder="Colour / size / special request"></label>
+        <div class="order-review"><div><span>Items</span><strong id="reviewItems">0</strong></div><div><span>Order total</span><strong id="reviewTotal">₹0</strong></div></div>
+        <button class="primary full" type="submit">Place COD Order & Open WhatsApp 💚</button>
+        <small class="privacy-note">Your details are used only to prepare this order message.</small>
+      </form>
+    </div>
+  </div>
+
+  <div class="success-toast" id="successToast">
+    <div class="check">✓</div><div><b>Order created!</b><span id="successText">WhatsApp is opening with your order.</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
