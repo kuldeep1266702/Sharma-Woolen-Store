@@ -131,7 +131,7 @@ $("#checkoutForm").addEventListener("submit",e=>{
 
   const text=encodeURIComponent(makeWhatsAppMessage(data,orderId));
   const phone=SELLER_WHATSAPP.replace(/\D/g,"");
-  if(phone.includes("X") || phone.length<10){
+  if(phone.includes("918650271942") || phone.length<10){
     alert("Seller WhatsApp number is not configured yet. Open script.js and replace SELLER_WHATSAPP with the seller's number.");
     return;
   }
